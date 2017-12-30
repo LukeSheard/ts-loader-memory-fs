@@ -1,12 +1,12 @@
 {
     "errors": [
         "\u001b[90m[tsl] \u001b[39m\u001b[1m\u001b[31mERROR\u001b[39m\u001b[22m\n\u001b[1m\u001b[31m      TS18002: The 'files' list in config file 'tsconfig.json' is empty.\u001b[39m\u001b[22m",
-        "./foo.ts\nModule build failed: \u001b[31merror while parsing tsconfig.json\u001b[39m"
+        "/foo.ts\nModule build failed: \u001b[31merror while parsing tsconfig.json\u001b[39m"
     ],
     "warnings": [],
     "version": "3.10.0",
     "hash": "0247008e41219542bd37",
-    "time": 274,
+    "time": 230,
     "publicPath": "",
     "assetsByChunkName": {
         "main": "bundle.js"
@@ -54,8 +54,8 @@
             "modules": [
                 {
                     "id": 0,
-                    "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/foo.ts",
-                    "name": "./foo.ts",
+                    "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/foo.ts",
+                    "name": "/foo.ts",
                     "index": 0,
                     "index2": 0,
                     "size": 94,
@@ -85,9 +85,9 @@
             "origins": [
                 {
                     "moduleId": 0,
-                    "module": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/foo.ts",
-                    "moduleIdentifier": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/foo.ts",
-                    "moduleName": "./foo.ts",
+                    "module": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/foo.ts",
+                    "moduleIdentifier": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/foo.ts",
+                    "moduleName": "/foo.ts",
                     "loc": "",
                     "name": "main",
                     "reasons": []
@@ -98,8 +98,8 @@
     "modules": [
         {
             "id": 0,
-            "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/foo.ts",
-            "name": "./foo.ts",
+            "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/foo.ts",
+            "name": "/foo.ts",
             "index": 0,
             "index2": 0,
             "size": 94,

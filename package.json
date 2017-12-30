@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "rimraf bundle.js output.json && ts-node webpack.ts"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LukeSheard/ts-loader-memory-fs.git"
@@ -19,6 +16,7 @@
   "homepage": "https://github.com/LukeSheard/ts-loader-memory-fs#readme",
   "dependencies": {
     "@types/memory-fs": "^0.3.0",
+    "@types/node": "^8.5.2",
     "@types/webpack": "^3.8.1",
     "memory-fs": "^0.4.1",
     "rimraf": "^2.6.2",

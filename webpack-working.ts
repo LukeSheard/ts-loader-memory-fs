@@ -2,12 +2,11 @@ import * as fs from "fs";
 import * as path from "path";
 import * as webpack from "webpack";
 import MemoryFS = require('memory-fs');
-import * as ts from "typescript";
 
 const compiler = webpack({
-  entry: "/foo.ts",
+  entry: "/foo.js",
   output: {
-    filename: "bundle.js",
+    filename: "bundle-working.js",
     path: path.resolve(__dirname),
   },
   module: {
@@ -44,13 +43,13 @@ const inputFileSystem = new MemoryFS();
 
 inputFileSystem.mkdirpSync("/bar");
 
-inputFileSystem.writeFileSync("/foo.ts", `
+inputFileSystem.writeFileSync("/foo.js", `
   const bar = require("/bar");
 
   bar.print();
 `);
 
-inputFileSystem.writeFileSync("/bar/index.ts", `
+inputFileSystem.writeFileSync("/bar/index.js", `
   module.exports.print = function () {
     console.log("PRINTING");
   }
@@ -65,7 +64,7 @@ compiler.run((err, stats) => {
     throw err;
   }
 
-  return fs.writeFile("output.json", JSON.stringify(stats.toJson(), null, 4), (err) => {
+  return fs.writeFile("output-working.json", JSON.stringify(stats.toJson(), null, 4), (err) => {
     if (err) {
       throw err;
     }
