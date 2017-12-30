@@ -1,0 +1,130 @@
+{
+    "errors": [
+        "\u001b[90m[tsl] \u001b[39m\u001b[1m\u001b[31mERROR\u001b[39m\u001b[22m\n\u001b[1m\u001b[31m      TS18002: The 'files' list in config file 'tsconfig.json' is empty.\u001b[39m\u001b[22m",
+        "./foo.ts\nModule build failed: \u001b[31merror while parsing tsconfig.json\u001b[39m"
+    ],
+    "warnings": [],
+    "version": "3.10.0",
+    "hash": "0247008e41219542bd37",
+    "time": 274,
+    "publicPath": "",
+    "assetsByChunkName": {
+        "main": "bundle.js"
+    },
+    "assets": [
+        {
+            "name": "bundle.js",
+            "size": 2567,
+            "chunks": [
+                0
+            ],
+            "chunkNames": [
+                "main"
+            ],
+            "emitted": true
+        }
+    ],
+    "filteredAssets": 0,
+    "entrypoints": {
+        "main": {
+            "chunks": [
+                0
+            ],
+            "assets": [
+                "bundle.js"
+            ]
+        }
+    },
+    "chunks": [
+        {
+            "id": 0,
+            "rendered": true,
+            "initial": true,
+            "entry": true,
+            "extraAsync": false,
+            "size": 94,
+            "names": [
+                "main"
+            ],
+            "files": [
+                "bundle.js"
+            ],
+            "hash": "7e639a981a333a4cfa17",
+            "parents": [],
+            "modules": [
+                {
+                    "id": 0,
+                    "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/foo.ts",
+                    "name": "./foo.ts",
+                    "index": 0,
+                    "index2": 0,
+                    "size": 94,
+                    "cacheable": true,
+                    "built": true,
+                    "optional": false,
+                    "prefetched": false,
+                    "chunks": [
+                        0
+                    ],
+                    "assets": [],
+                    "issuer": null,
+                    "issuerId": null,
+                    "issuerName": null,
+                    "failed": true,
+                    "errors": 2,
+                    "warnings": 0,
+                    "reasons": [],
+                    "usedExports": true,
+                    "providedExports": null,
+                    "optimizationBailout": [],
+                    "depth": 0,
+                    "source": "throw new Error(\"Module build failed: \\u001b[31merror while parsing tsconfig.json\\u001b[39m\");"
+                }
+            ],
+            "filteredModules": 0,
+            "origins": [
+                {
+                    "moduleId": 0,
+                    "module": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/foo.ts",
+                    "moduleIdentifier": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/foo.ts",
+                    "moduleName": "./foo.ts",
+                    "loc": "",
+                    "name": "main",
+                    "reasons": []
+                }
+            ]
+        }
+    ],
+    "modules": [
+        {
+            "id": 0,
+            "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/node_modules/ts-loader/index.js??ref--0!/Users/lukesheard/dev/TypeStrong/ts-loader-memory-fs/foo.ts",
+            "name": "./foo.ts",
+            "index": 0,
+            "index2": 0,
+            "size": 94,
+            "cacheable": true,
+            "built": true,
+            "optional": false,
+            "prefetched": false,
+            "chunks": [
+                0
+            ],
+            "assets": [],
+            "issuer": null,
+            "issuerId": null,
+            "issuerName": null,
+            "failed": true,
+            "errors": 2,
+            "warnings": 0,
+            "reasons": [],
+            "usedExports": true,
+            "providedExports": null,
+            "optimizationBailout": [],
+            "depth": 0,
+            "source": "throw new Error(\"Module build failed: \\u001b[31merror while parsing tsconfig.json\\u001b[39m\");"
+        }
+    ],
+    "filteredModules": 0,
+    "children": []
+}

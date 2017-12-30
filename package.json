@@ -1,0 +1,29 @@
+{
+  "name": "ts-loader-memory-fs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "rimraf bundle.js output.json && ts-node webpack.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeSheard/ts-loader-memory-fs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukeSheard/ts-loader-memory-fs/issues"
+  },
+  "homepage": "https://github.com/LukeSheard/ts-loader-memory-fs#readme",
+  "dependencies": {
+    "@types/memory-fs": "^0.3.0",
+    "@types/webpack": "^3.8.1",
+    "memory-fs": "^0.4.1",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  }
+}
