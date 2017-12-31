@@ -1,11 +1,11 @@
 {
     "errors": [
-        "/foo.ts\nModule build failed: TSError: ⨯ Unable to compile TypeScript\n../ts-loader/src/servicesHost.ts (75,11): Type '{ getProjectVersion: () => string; getScriptFileNames: () => string[]; getScriptVersion: (fileNam...' is not assignable to type 'LanguageServiceHost'.\n  Types of property 'getDirectories' are incompatible.\n    Type '(path: string) => string[] | ((dirPath: string) => string[])' is not assignable to type '(directoryName: string) => string[]'.\n      Type 'string[] | ((dirPath: string) => string[])' is not assignable to type 'string[]'.\n        Type '(dirPath: string) => string[]' is not assignable to type 'string[]'.\n          Property '[Symbol.unscopables]' is missing in type '(dirPath: string) => string[]'. (2322)\n    at getOutput (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:307:15)\n    at /Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:336:16\n    at Object.compile (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:498:11)\n    at Module.m._compile (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:392:43)\n    at Module._extensions..js (module.js:652:10)\n    at Object.require.extensions.(anonymous function) [as .ts] (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:395:12)\n    at Module.load (module.js:560:32)\n    at tryModuleLoad (module.js:503:12)\n    at Function.Module._load (module.js:495:3)\n    at Module.require (module.js:585:17)"
+        "/foo.ts\n\u001b[90m[tsl] \u001b[39m\u001b[1m\u001b[31mERROR\u001b[39m\u001b[22m\u001b[1m\u001b[31m in \u001b[39m\u001b[22m\u001b[1m\u001b[36m/foo.ts(2,24)\u001b[39m\u001b[22m\n\u001b[1m\u001b[31m      TS2307: Cannot find module './bar'.\u001b[39m\u001b[22m"
     ],
     "warnings": [],
     "version": "3.10.0",
-    "hash": "9e1a6ea2fb7f525c318d",
-    "time": 976,
+    "hash": "93dccd7140026d3b0445",
+    "time": 730,
     "publicPath": "",
     "assetsByChunkName": {
         "main": "bundle.js"
@@ -13,7 +13,7 @@
     "assets": [
         {
             "name": "bundle.js",
-            "size": 4040,
+            "size": 2847,
             "chunks": [
                 0
             ],
@@ -41,14 +41,14 @@
             "initial": true,
             "entry": true,
             "extraAsync": false,
-            "size": 1567,
+            "size": 268,
             "names": [
                 "main"
             ],
             "files": [
                 "bundle.js"
             ],
-            "hash": "2543587af2cbe0c783f2",
+            "hash": "a7dc2fc9c2b618d112dc",
             "parents": [],
             "modules": [
                 {
@@ -56,8 +56,8 @@
                     "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
                     "name": "/foo.ts",
                     "index": 0,
-                    "index2": 0,
-                    "size": 1567,
+                    "index2": 1,
+                    "size": 118,
                     "cacheable": true,
                     "built": true,
                     "optional": false,
@@ -69,7 +69,7 @@
                     "issuer": null,
                     "issuerId": null,
                     "issuerName": null,
-                    "failed": true,
+                    "failed": false,
                     "errors": 1,
                     "warnings": 0,
                     "reasons": [],
@@ -77,7 +77,45 @@
                     "providedExports": null,
                     "optimizationBailout": [],
                     "depth": 0,
-                    "source": "throw new Error(\"Module build failed: TSError: ⨯ Unable to compile TypeScript\\n../ts-loader/src/servicesHost.ts (75,11): Type '{ getProjectVersion: () => string; getScriptFileNames: () => string[]; getScriptVersion: (fileNam...' is not assignable to type 'LanguageServiceHost'.\\n  Types of property 'getDirectories' are incompatible.\\n    Type '(path: string) => string[] | ((dirPath: string) => string[])' is not assignable to type '(directoryName: string) => string[]'.\\n      Type 'string[] | ((dirPath: string) => string[])' is not assignable to type 'string[]'.\\n        Type '(dirPath: string) => string[]' is not assignable to type 'string[]'.\\n          Property '[Symbol.unscopables]' is missing in type '(dirPath: string) => string[]'. (2322)\\n    at getOutput (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:307:15)\\n    at /Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:336:16\\n    at Object.compile (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:498:11)\\n    at Module.m._compile (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:392:43)\\n    at Module._extensions..js (module.js:652:10)\\n    at Object.require.extensions.(anonymous function) [as .ts] (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:395:12)\\n    at Module.load (module.js:560:32)\\n    at tryModuleLoad (module.js:503:12)\\n    at Function.Module._load (module.js:495:3)\\n    at Module.require (module.js:585:17)\");"
+                    "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar bar = require(\"./bar\");\nbar.print();\n"
+                },
+                {
+                    "id": 1,
+                    "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/bar/index.ts",
+                    "name": "/bar/index.ts",
+                    "index": 1,
+                    "index2": 0,
+                    "size": 150,
+                    "cacheable": true,
+                    "built": true,
+                    "optional": false,
+                    "prefetched": false,
+                    "chunks": [
+                        0
+                    ],
+                    "assets": [],
+                    "issuer": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
+                    "issuerId": 0,
+                    "issuerName": "/foo.ts",
+                    "failed": false,
+                    "errors": 0,
+                    "warnings": 0,
+                    "reasons": [
+                        {
+                            "moduleId": 0,
+                            "moduleIdentifier": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
+                            "module": "/foo.ts",
+                            "moduleName": "/foo.ts",
+                            "type": "cjs require",
+                            "userRequest": "./bar",
+                            "loc": "3:10-26"
+                        }
+                    ],
+                    "usedExports": true,
+                    "providedExports": null,
+                    "optimizationBailout": [],
+                    "depth": 1,
+                    "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nfunction print() {\n    console.log(\"PRINTING\");\n}\nexports.print = print;\n"
                 }
             ],
             "filteredModules": 0,
@@ -100,8 +138,8 @@
             "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
             "name": "/foo.ts",
             "index": 0,
-            "index2": 0,
-            "size": 1567,
+            "index2": 1,
+            "size": 118,
             "cacheable": true,
             "built": true,
             "optional": false,
@@ -113,7 +151,7 @@
             "issuer": null,
             "issuerId": null,
             "issuerName": null,
-            "failed": true,
+            "failed": false,
             "errors": 1,
             "warnings": 0,
             "reasons": [],
@@ -121,7 +159,45 @@
             "providedExports": null,
             "optimizationBailout": [],
             "depth": 0,
-            "source": "throw new Error(\"Module build failed: TSError: ⨯ Unable to compile TypeScript\\n../ts-loader/src/servicesHost.ts (75,11): Type '{ getProjectVersion: () => string; getScriptFileNames: () => string[]; getScriptVersion: (fileNam...' is not assignable to type 'LanguageServiceHost'.\\n  Types of property 'getDirectories' are incompatible.\\n    Type '(path: string) => string[] | ((dirPath: string) => string[])' is not assignable to type '(directoryName: string) => string[]'.\\n      Type 'string[] | ((dirPath: string) => string[])' is not assignable to type 'string[]'.\\n        Type '(dirPath: string) => string[]' is not assignable to type 'string[]'.\\n          Property '[Symbol.unscopables]' is missing in type '(dirPath: string) => string[]'. (2322)\\n    at getOutput (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:307:15)\\n    at /Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:336:16\\n    at Object.compile (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:498:11)\\n    at Module.m._compile (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:392:43)\\n    at Module._extensions..js (module.js:652:10)\\n    at Object.require.extensions.(anonymous function) [as .ts] (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:395:12)\\n    at Module.load (module.js:560:32)\\n    at tryModuleLoad (module.js:503:12)\\n    at Function.Module._load (module.js:495:3)\\n    at Module.require (module.js:585:17)\");"
+            "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar bar = require(\"./bar\");\nbar.print();\n"
+        },
+        {
+            "id": 1,
+            "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/bar/index.ts",
+            "name": "/bar/index.ts",
+            "index": 1,
+            "index2": 0,
+            "size": 150,
+            "cacheable": true,
+            "built": true,
+            "optional": false,
+            "prefetched": false,
+            "chunks": [
+                0
+            ],
+            "assets": [],
+            "issuer": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
+            "issuerId": 0,
+            "issuerName": "/foo.ts",
+            "failed": false,
+            "errors": 0,
+            "warnings": 0,
+            "reasons": [
+                {
+                    "moduleId": 0,
+                    "moduleIdentifier": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
+                    "module": "/foo.ts",
+                    "moduleName": "/foo.ts",
+                    "type": "cjs require",
+                    "userRequest": "./bar",
+                    "loc": "3:10-26"
+                }
+            ],
+            "usedExports": true,
+            "providedExports": null,
+            "optimizationBailout": [],
+            "depth": 1,
+            "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nfunction print() {\n    console.log(\"PRINTING\");\n}\nexports.print = print;\n"
         }
     ],
     "filteredModules": 0,
