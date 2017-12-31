@@ -6,7 +6,7 @@
     "warnings": [],
     "version": "3.10.0",
     "hash": "0247008e41219542bd37",
-    "time": 230,
+    "time": 283,
     "publicPath": "",
     "assetsByChunkName": {
         "main": "bundle.js"

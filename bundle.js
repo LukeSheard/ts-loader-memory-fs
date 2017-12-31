@@ -65,9 +65,13 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: \u001b[31merror while parsing tsconfig.json\u001b[39m");
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+bar.print();
+
 
 /***/ })
 /******/ ]);

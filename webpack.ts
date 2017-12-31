@@ -16,6 +16,7 @@ const compiler = webpack({
         test: /\.tsx?$/,
         loader: "ts-loader",
         options: {
+          configFile: "/tsconfig.json",
           compilerOptions: {
             baseUrl: "/",
             paths: {
@@ -33,6 +34,9 @@ const compiler = webpack({
     ]
   },
   resolve: {
+    modules: [
+      "/"
+    ],
     extensions: [
       ".js",
       ".ts"
@@ -44,14 +48,20 @@ const inputFileSystem = new MemoryFS();
 
 inputFileSystem.mkdirpSync("/bar");
 
+inputFileSystem.writeFileSync("/tsconfig.json", `{
+  "files": [
+    "/foo.ts"
+  ]
+}`);
+
 inputFileSystem.writeFileSync("/foo.ts", `
-  const bar = require("/bar");
+  import * as bar from "./bar";
 
   bar.print();
 `);
 
 inputFileSystem.writeFileSync("/bar/index.ts", `
-  module.exports.print = function () {
+  export function print() {
     console.log("PRINTING");
   }
 `);
@@ -63,6 +73,16 @@ inputFileSystem.writeFileSync("/bar/index.ts", `
 compiler.run((err, stats) => {
   if (err) {
     throw err;
+  }
+
+  if (stats.hasErrors()) {
+    stats.toJson().errors.forEach((error) => console.error(error));
+    process.exit(1);
+  }
+
+  if (stats.hasWarnings()) {
+    stats.toJson().warnings.forEach(warning => console.error(warning));
+    process.exit(1);
   }
 
   return fs.writeFile("output.json", JSON.stringify(stats.toJson(), null, 4), (err) => {
