@@ -1,0 +1,127 @@
+{
+    "errors": [],
+    "warnings": [],
+    "version": "3.10.0",
+    "hash": "f56f9acef10cea351807",
+    "time": 1416,
+    "publicPath": "",
+    "assetsByChunkName": {
+        "main": "bundle-simple.js"
+    },
+    "assets": [
+        {
+            "name": "bundle-simple.js",
+            "size": 2498,
+            "chunks": [
+                0
+            ],
+            "chunkNames": [
+                "main"
+            ],
+            "emitted": true
+        }
+    ],
+    "filteredAssets": 0,
+    "entrypoints": {
+        "main": {
+            "chunks": [
+                0
+            ],
+            "assets": [
+                "bundle-simple.js"
+            ]
+        }
+    },
+    "chunks": [
+        {
+            "id": 0,
+            "rendered": true,
+            "initial": true,
+            "entry": true,
+            "extraAsync": false,
+            "size": 25,
+            "names": [
+                "main"
+            ],
+            "files": [
+                "bundle-simple.js"
+            ],
+            "hash": "d805266c0a739353bc7a",
+            "parents": [],
+            "modules": [
+                {
+                    "id": 0,
+                    "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
+                    "name": "/foo.ts",
+                    "index": 0,
+                    "index2": 0,
+                    "size": 25,
+                    "cacheable": true,
+                    "built": true,
+                    "optional": false,
+                    "prefetched": false,
+                    "chunks": [
+                        0
+                    ],
+                    "assets": [],
+                    "issuer": null,
+                    "issuerId": null,
+                    "issuerName": null,
+                    "failed": false,
+                    "errors": 0,
+                    "warnings": 0,
+                    "reasons": [],
+                    "usedExports": true,
+                    "providedExports": null,
+                    "optimizationBailout": [],
+                    "depth": 0,
+                    "source": "console.log(\"Working!\");\n"
+                }
+            ],
+            "filteredModules": 0,
+            "origins": [
+                {
+                    "moduleId": 0,
+                    "module": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
+                    "moduleIdentifier": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
+                    "moduleName": "/foo.ts",
+                    "loc": "",
+                    "name": "main",
+                    "reasons": []
+                }
+            ]
+        }
+    ],
+    "modules": [
+        {
+            "id": 0,
+            "identifier": "/Users/lukesheard/dev/TypeStrong/ts-loader/index.js??ref--0!/foo.ts",
+            "name": "/foo.ts",
+            "index": 0,
+            "index2": 0,
+            "size": 25,
+            "cacheable": true,
+            "built": true,
+            "optional": false,
+            "prefetched": false,
+            "chunks": [
+                0
+            ],
+            "assets": [],
+            "issuer": null,
+            "issuerId": null,
+            "issuerName": null,
+            "failed": false,
+            "errors": 0,
+            "warnings": 0,
+            "reasons": [],
+            "usedExports": true,
+            "providedExports": null,
+            "optimizationBailout": [],
+            "depth": 0,
+            "source": "console.log(\"Working!\");\n"
+        }
+    ],
+    "filteredModules": 0,
+    "children": []
+}

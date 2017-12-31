@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "broken": "ts-node --compilerOptions='{ \"lib\": [ \"es5\", \"es6\" ] }' webpack.ts",
+    "simple": "ts-node --compilerOptions='{ \"lib\": [ \"es5\", \"es6\" ] }' webpack-simple.ts",
+    "working": "ts-node --compilerOptions='{ \"lib\": [ \"es5\", \"es6\" ] }' webpack-working.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LukeSheard/ts-loader-memory-fs.git"

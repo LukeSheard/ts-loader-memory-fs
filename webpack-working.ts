@@ -64,6 +64,14 @@ compiler.run((err, stats) => {
     throw err;
   }
 
+  if (stats.hasErrors()) {
+    stats.toJson().errors.forEach((error) => console.error(error));
+  }
+
+  if (stats.hasWarnings()) {
+    stats.toJson().warnings.forEach(warning => console.warn(warning));
+  }
+
   return fs.writeFile("output-working.json", JSON.stringify(stats.toJson(), null, 4), (err) => {
     if (err) {
       throw err;

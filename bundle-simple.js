@@ -67,7 +67,8 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: TSError: ⨯ Unable to compile TypeScript\n../ts-loader/src/servicesHost.ts (75,11): Type '{ getProjectVersion: () => string; getScriptFileNames: () => string[]; getScriptVersion: (fileNam...' is not assignable to type 'LanguageServiceHost'.\n  Types of property 'getDirectories' are incompatible.\n    Type '(path: string) => string[] | ((dirPath: string) => string[])' is not assignable to type '(directoryName: string) => string[]'.\n      Type 'string[] | ((dirPath: string) => string[])' is not assignable to type 'string[]'.\n        Type '(dirPath: string) => string[]' is not assignable to type 'string[]'.\n          Property '[Symbol.unscopables]' is missing in type '(dirPath: string) => string[]'. (2322)\n    at getOutput (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:307:15)\n    at /Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:336:16\n    at Object.compile (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:498:11)\n    at Module.m._compile (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:392:43)\n    at Module._extensions..js (module.js:652:10)\n    at Object.require.extensions.(anonymous function) [as .ts] (/Users/lukesheard/.nvm/versions/node/v9.2.0/lib/node_modules/ts-node/src/index.ts:395:12)\n    at Module.load (module.js:560:32)\n    at tryModuleLoad (module.js:503:12)\n    at Function.Module._load (module.js:495:3)\n    at Module.require (module.js:585:17)");
+console.log("Working!");
+
 
 /***/ })
 /******/ ]);

@@ -7,7 +7,7 @@ import * as ts from "typescript";
 const compiler = webpack({
   entry: "/foo.ts",
   output: {
-    filename: "bundle.js",
+    filename: "bundle-simple.js",
     path: path.resolve(__dirname),
   },
   module: {
@@ -55,15 +55,7 @@ inputFileSystem.writeFileSync("/tsconfig.json", `{
 }`);
 
 inputFileSystem.writeFileSync("/foo.ts", `
-  import * as bar from "./bar";
-
-  bar.print();
-`);
-
-inputFileSystem.writeFileSync("/bar/index.ts", `
-  export function print() {
-    console.log("PRINTING");
-  }
+  console.log("Working!");
 `);
 
 (compiler as any).inputFileSystem = inputFileSystem;
@@ -83,7 +75,7 @@ compiler.run((err, stats) => {
     stats.toJson().warnings.forEach(warning => console.warn(warning));
   }
 
-  return fs.writeFile("output.json", JSON.stringify(stats.toJson(), null, 4), (err) => {
+  return fs.writeFile("output-simple.json", JSON.stringify(stats.toJson(), null, 4), (err) => {
     if (err) {
       throw err;
     }
